@@ -1,6 +1,6 @@
 package ch01.ex16;
 
-class BadDataSetException extends Exception {
+public class BadDataSetException extends Exception {
 	private String setName;
 	private Exception e;
 

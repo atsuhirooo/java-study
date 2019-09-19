@@ -24,7 +24,7 @@ public class LinkedListTest {
 		assertThat(vArray[0].getSpeed(), is(20));
 
 		assertThat(vArray[0].getDirection(), is("West"));
-		assertThat(vArray[0].getCarID(), is(1));
+		assertThat(vArray[0].getCarID(), is(2));
 		assertThat(vArray[0].getOwnerName(), is("b"));
 
 		vArray[1] = new Vehicle("c");

@@ -21,7 +21,7 @@ public class VehicleTest {
 		assertThat(v.getCarID(), is(1));
 
 		v.changeSpeed(500);
-		assertThat(v.getCarID(), is(500));
+		assertThat(v.getSpeed(), is(500));
 		v.stop();
 		assertThat(v.getSpeed(), is(0));
 	}
