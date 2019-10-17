@@ -14,14 +14,21 @@ public class BankAccountTest {
 		BankAccount bankAccount = new BankAccount();
 
 		bankAccount.depsiot(100);
-		bankAccount.withdraw(100);
+		bankAccount.withdraw(200);
+		bankAccount.depsiot(300);
+		bankAccount.withdraw(400);
+		bankAccount.depsiot(500);
+		bankAccount.withdraw(600);
+		bankAccount.withdraw(700);
+		bankAccount.withdraw(800);
+		bankAccount.withdraw(900);
+		bankAccount.withdraw(1000);
+		bankAccount.withdraw(1100);
 
 		History history = bankAccount.history();
-		Action a1 = history.next();
-		assertThat("0 deposit 100", is(a1.toString()));
 
-		Action a2 = history.next();
-		assertThat("0 withdraw 100", is(a2.toString()));
+		Action a = history.next();
+		assertThat("0 withdraw 200", is(a.toString()));
 
 	}
 

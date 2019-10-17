@@ -76,7 +76,4 @@ public class Vehicle {
 		}
 	}
 
-	public static final int TURN_RIGHT = 0;
-	public static final int TURN_LEFT = 1;
-
 }
