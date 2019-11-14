@@ -52,7 +52,7 @@ public class LinkedList {
 	public int getLength() {
 		ListElement tmp = this.head;
 		int count = 0;
-		while (tmp != null && tmp.getValue() != null) {
+		while (tmp != null) {
 			count++;
 			tmp = tmp.getNext();
 		}
