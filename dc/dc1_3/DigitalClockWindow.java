@@ -102,15 +102,14 @@ public class DigitalClockWindow extends Window {
 
 	Image buffer;
 
+	public void update(Graphics g) {
+		paint(g);
+	}
+
 	public void paint(Graphics graphics) {
 		LocalTime localTime = LocalTime.now();
 		buffer = createImage(this.getWidth(), this.getHeight());
 		Graphics bufferGraphics = buffer.getGraphics();
-		// if (bufferGraphics instanceof Graphics2D) {
-		// Graphics2D g2d = (Graphics2D) bufferGraphics;
-		// g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
-		// RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-		// }
 
 		bufferGraphics.setColor(myopupMenu.currentBackGroundColor);
 		bufferGraphics.fillRect(0, 0, this.getWidth(), this.getHeight());
@@ -135,7 +134,5 @@ public class DigitalClockWindow extends Window {
 
 			cnt++;
 		}
-
 	}
-
 }

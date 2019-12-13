@@ -41,9 +41,9 @@ public class PMyopupMenu extends PopupMenu {
 		Menu menu2 = new Menu("font");
 
 		List<String> fontlist = new ArrayList<String>();
-		fontlist.add("ITALIC");
-		fontlist.add("BOLD");
-		fontlist.add("MONOSPACED");
+		fontlist.add("DIALOG ");
+		fontlist.add("SANS_SERIF ");
+		fontlist.add("SERIF ");
 
 		for (String s : fontlist) {
 
