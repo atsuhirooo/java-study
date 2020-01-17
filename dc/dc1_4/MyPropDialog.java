@@ -271,6 +271,7 @@ public class MyPropDialog extends Dialog {
 		currentFontString = fontChoice.getSelectedItem();
 		currentFontColor = colormap.get(fontColorChoice.getSelectedItem());
 		currentBackGroundColor = colormap2.get(backgroungColorChoice.getSelectedItem());
+		digitalClockWindow.setSize(currentFontSize * 10 + 50, currentFontSize * 10 + 50);
 
 	}
 
