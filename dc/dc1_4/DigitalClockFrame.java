@@ -65,6 +65,8 @@ public class DigitalClockFrame extends Frame {
 
 		);
 
+		int a;
+
 		addMouseMotionListener(new MouseMotionListener() {
 
 			@Override

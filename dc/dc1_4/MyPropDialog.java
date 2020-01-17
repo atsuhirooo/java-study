@@ -101,6 +101,7 @@ public class MyPropDialog extends Dialog {
 			fontColorChoice.add(e.getKey());
 
 		}
+		int a;
 
 		// menuBar.add(menu3);
 		colormap2.put("BLUE", Color.BLUE);
