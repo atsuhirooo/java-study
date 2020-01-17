@@ -102,10 +102,10 @@ public class MyPropDialog extends Dialog {
 		}
 
 		// menuBar.add(menu3);
-
-		colormap2.put("RED", Color.RED);
-		colormap2.put("YELLOW", Color.YELLOW);
 		colormap2.put("BLUE", Color.BLUE);
+		colormap2.put("YELLOW", Color.YELLOW);
+		colormap2.put("RED", Color.RED);
+
 		for (Map.Entry<String, Color> e : colormap2.entrySet()) {
 			// MenuItem mi = new MenuItem(e.getKey());
 			// mi.addActionListener(new ActionListener() {
@@ -272,6 +272,7 @@ public class MyPropDialog extends Dialog {
 		currentFontColor = colormap.get(fontColorChoice.getSelectedItem());
 		currentBackGroundColor = colormap2.get(backgroungColorChoice.getSelectedItem());
 		digitalClockWindow.setSize(currentFontSize * 10 + 50, currentFontSize * 10 + 50);
+		setSize(currentFontSize * 20 + 50, currentFontSize * 10 + 50);
 
 	}
 
