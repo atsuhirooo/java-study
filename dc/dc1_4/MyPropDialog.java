@@ -99,6 +99,7 @@ public class MyPropDialog extends Dialog {
 			// menu3.add(mi);
 
 			fontColorChoice.add(e.getKey());
+
 		}
 
 		// menuBar.add(menu3);

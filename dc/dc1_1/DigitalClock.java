@@ -1,15 +1,18 @@
 package dc1_1;
 
 import java.awt.Canvas;
+import java.awt.Frame;
 import java.awt.Graphics;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.time.LocalTime;
-
-import javax.swing.JFrame;
 
 public final class DigitalClock {
 
-	private JFrame jFrame;
+	private Frame jFrame;
 	private Canvas canvas;
+
+	public Boolean LoopFlag = true;
 
 	public static void main(String[] args) {
 
@@ -27,7 +30,7 @@ public final class DigitalClock {
 
 	private DigitalClock() {
 		{
-			jFrame = new JFrame("DigitalClock");
+			jFrame = new Frame("DigitalClock");
 
 			canvas = new Canvas() {
 
@@ -42,6 +45,15 @@ public final class DigitalClock {
 
 			jFrame.add(canvas);
 			jFrame.setVisible(true);
+
+			jFrame.addWindowListener(new WindowAdapter() {
+				@Override
+				public void windowClosing(WindowEvent e) {
+					// timer.cancel();
+
+					System.exit(0);
+				}
+			});
 
 		}
 	}

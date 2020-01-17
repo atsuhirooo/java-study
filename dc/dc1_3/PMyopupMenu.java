@@ -22,7 +22,7 @@ public class PMyopupMenu extends PopupMenu {
 	PMyopupMenu(DigitalClockWindow digitalClockWindow_) {
 		digitalClockWindow = digitalClockWindow_;
 		Menu menu1 = new Menu("font size");
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 10; i++) {
 			int fontSize = 5 + 5 * i;
 			MenuItem mi = new MenuItem(Integer.toString(fontSize));
 			mi.addActionListener(new ActionListener() {
@@ -41,9 +41,9 @@ public class PMyopupMenu extends PopupMenu {
 		Menu menu2 = new Menu("font");
 
 		List<String> fontlist = new ArrayList<String>();
-		fontlist.add("DIALOG ");
-		fontlist.add("SANS_SERIF ");
-		fontlist.add("SERIF ");
+		fontlist.add("DIALOG");
+		fontlist.add("SANS_SERIF");
+		fontlist.add("SERIF");
 
 		for (String s : fontlist) {
 
