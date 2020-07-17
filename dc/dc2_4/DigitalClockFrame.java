@@ -34,7 +34,8 @@ public class DigitalClockFrame extends JFrame {
 	private static final String FONT_NAME = preferences.get(FONT_NAME_KEY, "Arial");
 	private static final int FONT_SIZE = Integer.parseInt(preferences.get(FONT_SIZE_KEY, "10"));
 	private static final Color FONT_COLOR = PropDialog.colorSet.get(preferences.get(FONT_COLOR_KEY, "BLUE"));
-	private static final Color BACKGROUND_COLOR = PropDialog.colorSet.get(preferences.get(FONT_COLOR_KEY, "YELLOW"));
+	private static final Color BACKGROUND_COLOR = PropDialog.colorSet
+			.get(preferences.get(BACKGROUND_COLOR_KEY, "YELLOW"));
 	private static final int X_CORDINATE = Integer.parseInt(preferences.get(X_COORDINATE_KEY, "0"));
 	private static final int Y_CORDINATE = Integer.parseInt(preferences.get(Y_COORDINATE_KEY, "0"));
 
