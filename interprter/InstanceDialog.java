@@ -39,7 +39,6 @@ public final class InstanceDialog extends BaseDialog {
 	private final JButton createButton = new JButton("new and save Instance");
 	private Object targetInstance;
 	// private final JButton createAndOpenButton = new JButton("manipulate
-	// instance");
 
 	public InstanceDialog(Class<?> clazz, boolean isArray, int arraySize) {
 
