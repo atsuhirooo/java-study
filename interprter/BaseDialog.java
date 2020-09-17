@@ -1,43 +1,21 @@
-import java.awt.GridBagLayout;
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.JTextField;
 
-import javax.swing.JDialog;
+abstract class BaseDialog extends InstanceHoldingDialog {
 
-abstract class BaseDialog extends JDialog {
 
-	protected List<DataChangeObserver> dataChangeObserverList = new ArrayList<>();
+	private static final long serialVersionUID = -2121890427136178457L;
 
-	protected static final int TOP_BOTTOM_MARGIN = 34;
-	protected static final int LEFT_RIGHT_MARGIN = 4;
+	private final ClassSearchPanel classSeachPanel;
 
-	protected boolean isArray;
-	protected int arraySize;
-	protected Object targetInstance = null;
-
-	public BaseDialog() {
-		setModal(true);
-		setResizable(false);
-		setLayout(new GridBagLayout());
+	public BaseDialog(Class<?> superClass) {
+		classSeachPanel = ClassSearchPanel.createClassSearchPanel(this, superClass);
 	}
 
-	public void addObserver(DataChangeObserver dco) {
-		dataChangeObserverList.add(dco);
-
+	public BaseDialog(JTextField jTextField) {
+		classSeachPanel = ClassSearchPanel.createClassSearchPanel(this, jTextField);
 	}
 
-	public void deleteObserver(DataChangeObserver dco) {
-		dataChangeObserverList.remove(dco);
-
+	public final ClassSearchPanel getClassSeachPanel() {
+		return classSeachPanel;
 	}
-
-	public abstract Object getTargetInstance();
-
-	public void notifyObservers() {
-		for (DataChangeObserver dco : dataChangeObserverList) {
-			dco.update(this);
-		}
-
-	}
-
 }
