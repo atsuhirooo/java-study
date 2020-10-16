@@ -11,4 +11,19 @@ public final class SearchDir {
 
 		return files;
 	}
+
+	public static void main(String[] args) {
+
+		try {
+
+			for (String f : findDirLambda(new File(args[0]), ".txt")) {
+				System.out.println(f);
+
+			}
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+	}
 }

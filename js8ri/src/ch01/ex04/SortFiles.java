@@ -15,4 +15,17 @@ public final class SortFiles {
 			return file1.isDirectory() ? -1 : 1;
 		});
 	}
+
+	public static void main(String[] args) {
+
+		File[] files = new File(args[0]).listFiles();
+
+		sortFile(files);
+
+		for (File f : files) {
+			System.out.println(f.getName());
+
+		}
+
+	}
 }

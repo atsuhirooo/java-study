@@ -18,4 +18,19 @@ public final class SearchDir {
 
 		return subDirectories;
 	}
+
+	public static void main(String[] args) {
+
+		try {
+
+			for (File f : findDir(new File(args[0]))) {
+				System.out.println(f.getName());
+
+			}
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+	}
 }
